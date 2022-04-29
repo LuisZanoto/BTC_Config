@@ -61,12 +61,12 @@ namespace WinBTC
 
             while (csvReader.Read())
             {
-                var firstName = csvReader.GetField(0);
+                var firstName = csvReader.GetField(6);
                 var lastName = csvReader.GetField(1);
                 var occupation = csvReader.GetField(2);
-                Console.WriteLine("\n************************************");
-                Console.WriteLine($"{firstName} {lastName} is {occupation}");
+                
                 txtLinhaAtual.Text = firstName;
+
             }
         }
 
