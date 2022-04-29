@@ -32,19 +32,21 @@ namespace WinBTC
             this.Btn_Arq = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtArq = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtAmostras = new System.Windows.Forms.TextBox();
             this.txtBuffer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtLucro = new System.Windows.Forms.TextBox();
-            this.btnIniciar = new System.Windows.Forms.Button();
-            this.txtLinhaAtual = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtCotacao = new System.Windows.Forms.TextBox();
+            this.txtAmostras = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtArq = new System.Windows.Forms.RichTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtLucro = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnIniciar = new System.Windows.Forms.Button();
+            this.txtMedia = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtLinhaAtual = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -76,22 +78,33 @@ namespace WinBTC
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuração :";
             // 
-            // txtArq
+            // txtBuffer
             // 
-            this.txtArq.Location = new System.Drawing.Point(104, 30);
-            this.txtArq.Name = "txtArq";
-            this.txtArq.Size = new System.Drawing.Size(333, 58);
-            this.txtArq.TabIndex = 1;
-            this.txtArq.Text = "";
+            this.txtBuffer.Location = new System.Drawing.Point(114, 173);
+            this.txtBuffer.Name = "txtBuffer";
+            this.txtBuffer.Size = new System.Drawing.Size(32, 29);
+            this.txtBuffer.TabIndex = 5;
+            this.txtBuffer.Text = "5";
+            this.txtBuffer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBuffer.TextChanged += new System.EventHandler(this.txtBuffer_TextChanged);
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Total de linhas (Amostras) :";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 176);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Qtd Buffer :";
+            // 
+            // txtCotacao
+            // 
+            this.txtCotacao.Location = new System.Drawing.Point(365, 173);
+            this.txtCotacao.Name = "txtCotacao";
+            this.txtCotacao.Size = new System.Drawing.Size(72, 29);
+            this.txtCotacao.TabIndex = 3;
+            this.txtCotacao.Text = "40000";
+            this.txtCotacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtAmostras
             // 
@@ -103,23 +116,31 @@ namespace WinBTC
             this.txtAmostras.TabIndex = 3;
             this.txtAmostras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtBuffer
+            // label5
             // 
-            this.txtBuffer.Location = new System.Drawing.Point(114, 173);
-            this.txtBuffer.Name = "txtBuffer";
-            this.txtBuffer.Size = new System.Drawing.Size(32, 29);
-            this.txtBuffer.TabIndex = 5;
-            this.txtBuffer.Text = "5";
-            this.txtBuffer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(206, 176);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(153, 21);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Cotação Base Inicial :";
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 176);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Qtd Buffer :";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Total de linhas (Amostras) :";
+            // 
+            // txtArq
+            // 
+            this.txtArq.Location = new System.Drawing.Point(104, 30);
+            this.txtArq.Name = "txtArq";
+            this.txtArq.Size = new System.Drawing.Size(333, 58);
+            this.txtArq.TabIndex = 1;
+            this.txtArq.Text = "";
             // 
             // groupBox2
             // 
@@ -132,15 +153,6 @@ namespace WinBTC
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultados :";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 21);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Lucro Atual :";
-            // 
             // txtLucro
             // 
             this.txtLucro.Location = new System.Drawing.Point(125, 42);
@@ -150,9 +162,18 @@ namespace WinBTC
             this.txtLucro.Text = "0";
             this.txtLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 21);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Lucro Atual :";
+            // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(31, 327);
+            this.btnIniciar.Location = new System.Drawing.Point(41, 289);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(79, 32);
             this.btnIniciar.TabIndex = 3;
@@ -160,40 +181,39 @@ namespace WinBTC
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // txtLinhaAtual
+            // txtMedia
             // 
-            this.txtLinhaAtual.Location = new System.Drawing.Point(262, 327);
-            this.txtLinhaAtual.Name = "txtLinhaAtual";
-            this.txtLinhaAtual.Size = new System.Drawing.Size(205, 29);
-            this.txtLinhaAtual.TabIndex = 4;
-            this.txtLinhaAtual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMedia.Location = new System.Drawing.Point(533, 289);
+            this.txtMedia.Name = "txtMedia";
+            this.txtMedia.Size = new System.Drawing.Size(132, 29);
+            this.txtMedia.TabIndex = 4;
+            this.txtMedia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(161, 330);
+            this.label4.Location = new System.Drawing.Point(161, 289);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Linha Atual :";
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(206, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Cotação Base Inicial :";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(427, 289);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 21);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Média Atual :";
             // 
-            // txtCotacao
+            // txtLinhaAtual
             // 
-            this.txtCotacao.Location = new System.Drawing.Point(365, 173);
-            this.txtCotacao.Name = "txtCotacao";
-            this.txtCotacao.Size = new System.Drawing.Size(72, 29);
-            this.txtCotacao.TabIndex = 3;
-            this.txtCotacao.Text = "40000";
-            this.txtCotacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLinhaAtual.Location = new System.Drawing.Point(262, 267);
+            this.txtLinhaAtual.Name = "txtLinhaAtual";
+            this.txtLinhaAtual.Size = new System.Drawing.Size(132, 92);
+            this.txtLinhaAtual.TabIndex = 9;
+            this.txtLinhaAtual.Text = "";
             // 
             // Form1
             // 
@@ -201,14 +221,17 @@ namespace WinBTC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtLinhaAtual);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtMedia);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -234,8 +257,10 @@ namespace WinBTC
         private System.Windows.Forms.TextBox txtCotacao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.TextBox txtLinhaAtual;
+        private System.Windows.Forms.TextBox txtMedia;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox txtLinhaAtual;
     }
 }
 
