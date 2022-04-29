@@ -61,7 +61,7 @@ namespace WinBTC
             
             for (int a = 1; a <= T_buffer; a++)
             {
-                soma = V_buffer_c[a];
+                soma = soma + V_buffer_c[a];
                 //txtMedia.Text = txtMedia.Text + soma + "\n";
             }
             double media = (soma / T_buffer);            
@@ -86,16 +86,16 @@ namespace WinBTC
             {
                 var v_open = csvReader.GetField(1);               
                 
-                txtMedia.Text = v_open;
+                txtLinhaAtual.Text = txtLinhaAtual.Text + v_open.ToString() + "\n";
                 i++;
-                V_buffer[i] = Convert.ToDouble(txtMedia.Text);
+                V_buffer[i] = Convert.ToDouble(v_open);
                 
                 if (i >= T_buffer)
                 {
                     i = 0;
                 }
 
-                txtLinhaAtual.Text  = Calculos(V_buffer);
+                txtMedia.Text  = Calculos(V_buffer);
 
             }
         }
