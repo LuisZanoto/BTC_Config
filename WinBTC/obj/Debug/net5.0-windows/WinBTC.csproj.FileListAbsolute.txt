@@ -16,3 +16,5 @@ C:\Eletronica01\Fatec\2022\Binance\BTC_Config\WinBTC\obj\Debug\net5.0-windows\Wi
 C:\Eletronica01\Fatec\2022\Binance\BTC_Config\WinBTC\obj\Debug\net5.0-windows\ref\WinBTC.dll
 C:\Eletronica01\Fatec\2022\Binance\BTC_Config\WinBTC\obj\Debug\net5.0-windows\WinBTC.pdb
 C:\Eletronica01\Fatec\2022\Binance\BTC_Config\WinBTC\obj\Debug\net5.0-windows\WinBTC.genruntimeconfig.cache
+C:\Eletronica01\Fatec\2022\Binance\BTC_Config\WinBTC\bin\Debug\net5.0-windows\CsvHelper.dll
+C:\Eletronica01\Fatec\2022\Binance\BTC_Config\WinBTC\obj\Debug\net5.0-windows\WinBTC.csproj.CopyComplete
