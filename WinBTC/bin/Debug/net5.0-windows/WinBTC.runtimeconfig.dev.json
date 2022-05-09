@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\calibracao.01\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\calibracao.01\\.nuget\\packages"
+      "C:\\Users\\luisz\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\luisz\\.nuget\\packages"
     ]
   }
 }

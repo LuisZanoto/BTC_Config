@@ -45,19 +45,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\calibracao.01\\.nuget\\packages\\": {}
+    "C:\\Users\\luisz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Eletronica01\\Fatec\\2022\\Binance\\BTC_Config\\WinBTC\\WinBTC.csproj",
+      "projectUniqueName": "F:\\2022\\Binance\\BTC_Config\\WinBTC\\WinBTC.csproj",
       "projectName": "WinBTC",
-      "projectPath": "C:\\Eletronica01\\Fatec\\2022\\Binance\\BTC_Config\\WinBTC\\WinBTC.csproj",
-      "packagesPath": "C:\\Users\\calibracao.01\\.nuget\\packages\\",
-      "outputPath": "C:\\Eletronica01\\Fatec\\2022\\Binance\\BTC_Config\\WinBTC\\obj\\",
+      "projectPath": "F:\\2022\\Binance\\BTC_Config\\WinBTC\\WinBTC.csproj",
+      "packagesPath": "C:\\Users\\luisz\\.nuget\\packages\\",
+      "outputPath": "F:\\2022\\Binance\\BTC_Config\\WinBTC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\calibracao.01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luisz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -106,7 +106,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

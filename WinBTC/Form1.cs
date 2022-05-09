@@ -30,6 +30,8 @@ namespace WinBTC
         private void Form1_Load(object sender, EventArgs e)
         {
             T_buffer = Convert.ToInt32(txtBuffer.Text);
+            
+            txtSaldoUSD.Text = txtBtcInicial.ToString();
         }
 
         private void Btn_Arq_Click(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace WinBTC
             txtArq.Text = filePath;
             //Negocio.ClassGlobal.ArqRede = filePath;
         }
-        private String Calculos(double[] V_buffer_c)
+        private String C_Media(double[] V_buffer_c)
         {
             double soma = 0;
             
@@ -67,6 +69,30 @@ namespace WinBTC
             double media = (soma / T_buffer);            
             return media.ToString();
         }
+        private void Calculos()
+        {
+            double lucroAtual = 0;
+            double SaldoBTC = Convert.ToDouble(txtSaldoAtual.Text);
+            double media = Convert.ToDouble(txtMedia.Text);
+            double ValorAtual = Convert.ToDouble(txtLinhaAtual.Text);
+            double mxCompra = Convert.ToDouble(txtMxCompra.Text);
+            double mxVenda = Convert.ToDouble(txtMxVenda.Text);
+
+            if (ValorAtual < media)
+            {
+                //Compra xx BTC por cotação atual de U$
+                SaldoBTC = SaldoBTC - mxCompra;
+            }
+            if (ValorAtual > media)
+            {
+                //Vende xx BTC por cotação atual de U$
+                SaldoBTC = SaldoBTC + mxVenda;
+            }
+
+            txtSaldoAtual.Text = SaldoBTC.ToString();
+            
+        }
+
 
         private void LerArquivo()
         {
@@ -86,7 +112,7 @@ namespace WinBTC
             {
                 var v_open = csvReader.GetField(1);               
                 
-                txtLinhaAtual.Text = txtLinhaAtual.Text + v_open.ToString() + "\n";
+                txtLinhaAtual.Text = v_open.ToString();
                 i++;
                 V_buffer[i] = Convert.ToDouble(v_open);
                 
@@ -95,7 +121,8 @@ namespace WinBTC
                     i = 0;
                 }
 
-                txtMedia.Text  = Calculos(V_buffer);
+                txtMedia.Text  = C_Media(V_buffer);
+                Calculos();
 
             }
         }
