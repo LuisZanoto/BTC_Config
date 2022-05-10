@@ -112,7 +112,8 @@ namespace WinBTC
             // Ultima Cotação
             textBox7.Text = valor.ToString();
             // Ultimo Saldo BTC cotação
-            textBox2.Text = (Saida[3] * valor).ToString();
+            double cota_btc = (Saida[3] * valor);
+            textBox2.Text = cota_btc.ToString();
 
             textBox4.Text = Saida[4].ToString();
             textBox3.Text = Saida[3].ToString();
@@ -120,6 +121,8 @@ namespace WinBTC
             // Atualiza compras e vendas
             txtNCompras.Text = Ncompras.ToString();
             txtNVendas.Text = Nvendas.ToString();
+            // Saldo total
+            textBox1.Text = (cota_btc + Saida[4]).ToString();
         }
 
 
