@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Windows.Forms;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Globalization;
 using CsvHelper;
 using CsvHelper.Configuration;
 using System.IO;
+
+
 
 namespace WinBTC
 {
@@ -22,6 +21,8 @@ namespace WinBTC
         //int[] array1 = new int[5];
         double[] V_buffer = new double[50];
         double[] Saida = new double[10];
+        int Ncompras = 0;
+        int Nvendas = 0;
 
         public Form1()
         {
@@ -73,6 +74,8 @@ namespace WinBTC
             txtSaldoSoma.Text = (i2).ToString();
             Saida[4] = f2; // Saldo U$
             Saida[3] = g2;// Saldo BTC
+            Ncompras = 0;
+            Nvendas = 0;
         }
 
 
@@ -97,22 +100,26 @@ namespace WinBTC
                 //Compra xx BTC por cotação atual de U$
                 Saida[4] = Saida[4] - (volume * valor);
                 Saida[3] = Saida[3] + volume;
+                Ncompras++;
             }
             if (valor > media_loc)
             {
                 //Vende xx BTC por cotação atual de U$
                 Saida[4] = Saida[4] + (volume * valor);
                 Saida[3] = Saida[3] - volume;
+                Nvendas++;
             }
             // Ultima Cotação
             textBox7.Text = valor.ToString();
             // Ultimo Saldo BTC cotação
             textBox2.Text = (Saida[3] * valor).ToString();
 
-
             textBox4.Text = Saida[4].ToString();
             textBox3.Text = Saida[3].ToString();
             textBox8.Text = n_linha.ToString();
+            // Atualiza compras e vendas
+            txtNCompras.Text = Ncompras.ToString();
+            txtNVendas.Text = Nvendas.ToString();
         }
 
 
@@ -151,6 +158,45 @@ namespace WinBTC
 
             }
         }
+
+        //private void grafico()
+        //{
+        //    DataTable dt = new DataTable();
+        //    dt.Columns.Add("X_Value", typeof(double));
+        //    dt.Columns.Add("Y_Value", typeof(double));
+        //    dt.Columns.Add("Y_Value2", typeof(double));
+
+        //    //loop rows
+        //    int maximo = dgvGela1.Rows.Count;
+        //    int ref_temp;
+        //    int temp_lida;
+        //    for (int x = 1; x <= maximo; x++)
+        //    {
+        //        ref_temp = int.Parse(dgvGela1[3, x - 1].Value.ToString());
+        //        temp_lida = int.Parse(dgvGela1[5, x - 1].Value.ToString());
+        //        dt.Rows.Add(x, ref_temp, temp_lida);
+        //    }
+
+        //    chart1.DataSource = dt;
+        //    chart1.Series[0].XValueMember = "X_Value";
+        //    chart1.Series[0].YValueMembers = "Y_Value";
+
+        //    chart1.Series[1].XValueMember = "X_Value";
+        //    chart1.Series[1].YValueMembers = "Y_Value2";
+        //    //
+        //    chart1.Series[0].ChartType = SeriesChartType.Line;
+        //    chart1.Series[0].Color = System.Drawing.Color.DarkBlue;
+        //    //
+        //    chart1.Series[1].ChartType = SeriesChartType.Line;
+        //    chart1.Series[1].Color = System.Drawing.Color.Red;
+        //    //
+        //    chart1.Series[0].BorderWidth = 4;
+        //    chart1.Series[1].BorderWidth = 4;
+
+        //    chart1.DataBind();
+
+        //}
+
 
         private void Le_linha(int l1)
         {

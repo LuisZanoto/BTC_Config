@@ -70,6 +70,10 @@ namespace WinBTC
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.txtNCompras = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtNVendas = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -210,20 +214,20 @@ namespace WinBTC
             // 
             // txtVol
             // 
-            this.txtVol.Location = new System.Drawing.Point(186, 44);
+            this.txtVol.Location = new System.Drawing.Point(198, 44);
             this.txtVol.Margin = new System.Windows.Forms.Padding(2);
             this.txtVol.Name = "txtVol";
-            this.txtVol.Size = new System.Drawing.Size(62, 25);
+            this.txtVol.Size = new System.Drawing.Size(50, 25);
             this.txtVol.TabIndex = 20;
             this.txtVol.Text = "0,001";
             this.txtVol.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtCotacao
             // 
-            this.txtCotacao.Location = new System.Drawing.Point(63, 44);
+            this.txtCotacao.Location = new System.Drawing.Point(94, 44);
             this.txtCotacao.Margin = new System.Windows.Forms.Padding(2);
             this.txtCotacao.Name = "txtCotacao";
-            this.txtCotacao.Size = new System.Drawing.Size(66, 25);
+            this.txtCotacao.Size = new System.Drawing.Size(76, 25);
             this.txtCotacao.TabIndex = 19;
             this.txtCotacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -232,7 +236,7 @@ namespace WinBTC
             this.txtLinha.Location = new System.Drawing.Point(15, 44);
             this.txtLinha.Margin = new System.Windows.Forms.Padding(2);
             this.txtLinha.Name = "txtLinha";
-            this.txtLinha.Size = new System.Drawing.Size(26, 25);
+            this.txtLinha.Size = new System.Drawing.Size(61, 25);
             this.txtLinha.TabIndex = 6;
             this.txtLinha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -309,7 +313,7 @@ namespace WinBTC
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(63, 20);
+            this.label10.Location = new System.Drawing.Point(94, 20);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 19);
@@ -329,6 +333,10 @@ namespace WinBTC
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtNVendas);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.txtNCompras);
+            this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.textBox3);
@@ -349,7 +357,7 @@ namespace WinBTC
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(827, 93);
+            this.groupBox3.Size = new System.Drawing.Size(827, 160);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado :";
@@ -408,10 +416,10 @@ namespace WinBTC
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.Aqua;
-            this.textBox6.Location = new System.Drawing.Point(186, 44);
+            this.textBox6.Location = new System.Drawing.Point(197, 44);
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(62, 25);
+            this.textBox6.Size = new System.Drawing.Size(51, 25);
             this.textBox6.TabIndex = 20;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -421,7 +429,7 @@ namespace WinBTC
             this.textBox7.Location = new System.Drawing.Point(93, 44);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(66, 25);
+            this.textBox7.Size = new System.Drawing.Size(76, 25);
             this.textBox7.TabIndex = 19;
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -515,6 +523,46 @@ namespace WinBTC
             this.label17.TabIndex = 11;
             this.label17.Text = "Cotação :";
             // 
+            // txtNCompras
+            // 
+            this.txtNCompras.BackColor = System.Drawing.Color.Aqua;
+            this.txtNCompras.Location = new System.Drawing.Point(15, 114);
+            this.txtNCompras.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNCompras.Name = "txtNCompras";
+            this.txtNCompras.Size = new System.Drawing.Size(60, 25);
+            this.txtNCompras.TabIndex = 26;
+            this.txtNCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(9, 89);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(71, 19);
+            this.label18.TabIndex = 27;
+            this.label18.Text = "Compras :";
+            // 
+            // txtNVendas
+            // 
+            this.txtNVendas.BackColor = System.Drawing.Color.Aqua;
+            this.txtNVendas.Location = new System.Drawing.Point(99, 114);
+            this.txtNVendas.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNVendas.Name = "txtNVendas";
+            this.txtNVendas.Size = new System.Drawing.Size(60, 25);
+            this.txtNVendas.TabIndex = 28;
+            this.txtNVendas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(93, 89);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 19);
+            this.label19.TabIndex = 29;
+            this.label19.Text = "Vendas :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -583,6 +631,10 @@ namespace WinBTC
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtNVendas;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtNCompras;
+        private System.Windows.Forms.Label label18;
     }
 }
 
