@@ -74,6 +74,8 @@ namespace WinBTC
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.txtSaldoFinal = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -333,6 +335,8 @@ namespace WinBTC
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtSaldoFinal);
+            this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.txtNVendas);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.txtNCompras);
@@ -563,6 +567,26 @@ namespace WinBTC
             this.label17.TabIndex = 11;
             this.label17.Text = "Cot. Final :";
             // 
+            // txtSaldoFinal
+            // 
+            this.txtSaldoFinal.BackColor = System.Drawing.Color.Aqua;
+            this.txtSaldoFinal.Location = new System.Drawing.Point(197, 114);
+            this.txtSaldoFinal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSaldoFinal.Name = "txtSaldoFinal";
+            this.txtSaldoFinal.Size = new System.Drawing.Size(115, 25);
+            this.txtSaldoFinal.TabIndex = 31;
+            this.txtSaldoFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(178, 89);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(103, 19);
+            this.label20.TabIndex = 30;
+            this.label20.Text = "Saldo Final U$ :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -635,6 +659,8 @@ namespace WinBTC
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtNCompras;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtSaldoFinal;
+        private System.Windows.Forms.Label label20;
     }
 }
 

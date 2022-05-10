@@ -124,6 +124,12 @@ namespace WinBTC
             // Saldo total
             textBox1.Text = (cota_btc + Saida[4]).ToString();
         }
+        private void Finaliza()
+        {
+            // saldosoma + textBox1
+            double sf = Convert.ToDouble(textBox1.Text)  - Convert.ToDouble(txtSaldoSoma.Text);
+            txtSaldoFinal.Text = sf.ToString();
+        }
 
 
         private void LerArquivo()
@@ -232,6 +238,7 @@ namespace WinBTC
         {
             Atualiza();
             LerArquivo();
+            Finaliza();
         }
 
         private void txtBuffer_TextChanged(object sender, EventArgs e)
