@@ -31,7 +31,7 @@ namespace WinBTC
         {
             T_buffer = Convert.ToInt32(txtBuffer.Text);
             
-            txtSaldoUSD.Text = txtBtcInicial.ToString();
+           
         }
 
         private void Btn_Arq_Click(object sender, EventArgs e)
@@ -55,9 +55,9 @@ namespace WinBTC
             }
 
             txtArq.Text = filePath;
-            //Negocio.ClassGlobal.ArqRede = filePath;
+            Le_linha(1);
         }
-        private String C_Media(double[] V_buffer_c)
+        private double C_Media(double[] V_buffer_c)
         {
             double soma = 0;
             
@@ -66,30 +66,30 @@ namespace WinBTC
                 soma = soma + V_buffer_c[a];
                 //txtMedia.Text = txtMedia.Text + soma + "\n";
             }
-            double media = (soma / T_buffer);            
-            return media.ToString();
+            double media = (soma / T_buffer);
+            return media;
         }
-        private void Calculos()
+        private void Calculos(double media_loc)
         {
-            double lucroAtual = 0;
-            double SaldoBTC = Convert.ToDouble(txtSaldoAtual.Text);
-            double media = Convert.ToDouble(txtMedia.Text);
-            double ValorAtual = Convert.ToDouble(txtLinhaAtual.Text);
-            double mxCompra = Convert.ToDouble(txtMxCompra.Text);
-            double mxVenda = Convert.ToDouble(txtMxVenda.Text);
+            //double lucroAtual = 0;
+            //double SaldoBTC = Convert.ToDouble(txtSaldoAtual.Text);
+            
+            //double ValorAtual = Convert.ToDouble(txtLinhaAtual.Text);
+            //double mxCompra = Convert.ToDouble(txtMxCompra.Text);
+            //double mxVenda = Convert.ToDouble(txtMxVenda.Text);
 
-            if (ValorAtual < media)
-            {
-                //Compra xx BTC por cotação atual de U$
-                SaldoBTC = SaldoBTC - mxCompra;
-            }
-            if (ValorAtual > media)
-            {
-                //Vende xx BTC por cotação atual de U$
-                SaldoBTC = SaldoBTC + mxVenda;
-            }
+            //if (ValorAtual < media_loc)
+            //{
+            //    //Compra xx BTC por cotação atual de U$
+            //    SaldoBTC = SaldoBTC - mxCompra;
+            //}
+            //if (ValorAtual > media_loc)
+            //{
+            //    //Vende xx BTC por cotação atual de U$
+            //    SaldoBTC = SaldoBTC + mxVenda;
+            //}
 
-            txtSaldoAtual.Text = SaldoBTC.ToString();
+            //txtSaldoAtual.Text = SaldoBTC.ToString();
             
         }
 
@@ -97,6 +97,7 @@ namespace WinBTC
         private void LerArquivo()
         {
             int i = 0; // controle do buffer
+            int l = 0; // controle linha
             var csvConfig = new CsvConfiguration(CultureInfo.CurrentCulture)
             {
                 HasHeaderRecord = false,
@@ -106,25 +107,53 @@ namespace WinBTC
             };
 
             using var streamReader = File.OpenText(txtArq.Text);
+           
             using var csvReader = new CsvReader(streamReader, csvConfig);
 
             while (csvReader.Read())
             {
-                var v_open = csvReader.GetField(1);               
-                
-                txtLinhaAtual.Text = v_open.ToString();
+                var v_open = csvReader.GetField(1);
                 i++;
+                l++;
+                txtLinha.Text = l.ToString();
+                
                 V_buffer[i] = Convert.ToDouble(v_open);
                 
                 if (i >= T_buffer)
                 {
                     i = 0;
                 }
-
-                txtMedia.Text  = C_Media(V_buffer);
-                Calculos();
+                
+                Calculos(C_Media(V_buffer));
 
             }
+        }
+
+        private void Le_linha(int l1)
+        {
+            int i = 0;
+            var csvConfig = new CsvConfiguration(CultureInfo.CurrentCulture)
+            {
+                HasHeaderRecord = false,
+                Comment = '#',
+                AllowComments = true,
+                Delimiter = ";",
+            };
+
+            using var streamReader = File.OpenText(txtArq.Text);
+
+            using var csvReader = new CsvReader(streamReader, csvConfig);
+            while (csvReader.Read())
+            {
+                var v_open = csvReader.GetField(1);
+                txtCotacao.Text = v_open.ToString();
+                txtLinha.Text = l1.ToString();
+
+                break;              
+
+            }
+
+
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
