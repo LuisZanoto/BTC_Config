@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TcxqM2iisW7BpCOEJ8T3Qy1eLXSqQpYIoLoJs5UL9zKhoRsne1+DZfJqySIRWi+W9Z0tuzdTs2+kq/7YfCq+HA==",
+  "dgSpecHash": "gLdqxc2Kwipnefrbc1ZA+fYaQPiAI2hf5tTCr7YNg4Aenk3/8K8RjCZiW1C3zkdajb2jgQqm5Y8zlgTh0RwWbQ==",
   "success": true,
-  "projectFilePath": "F:\\2022\\Binance\\BTC_Config\\WinBTC\\WinBTC.csproj",
+  "projectFilePath": "C:\\Eletronica01\\Fatec\\2022\\Binance\\BTC_Config\\WinBTC\\WinBTC.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\luisz\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
+    "C:\\Users\\calibracao.01\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
   ],
   "logs": []
 }

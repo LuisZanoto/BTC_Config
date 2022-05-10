@@ -21,6 +21,7 @@ namespace WinBTC
         int T_buffer;
         //int[] array1 = new int[5];
         double[] V_buffer = new double[50];
+        double[] Saida = new double[10];
 
         public Form1()
         {
@@ -60,7 +61,7 @@ namespace WinBTC
         }
         private void Atualiza()
         {
-            double d2 = Convert.ToDouble(txtC_V.Text);
+            double d2 = Convert.ToDouble(txtVol.Text);
             double c2 = Convert.ToDouble(txtCotacao.Text);
             double g2 = Convert.ToDouble(txtSaldoBTCini.Text);
             double h2 = g2 * c2;
@@ -70,6 +71,7 @@ namespace WinBTC
             txtBTC_Cota.Text = (h2).ToString();
             
             txtSaldoSoma.Text = (i2).ToString();
+            Saida[4] = f2;
         }
 
 
@@ -85,28 +87,23 @@ namespace WinBTC
             double media = (soma / T_buffer);
             return media;
         }
-        private void Calculos(double media_loc)
-        {
-            //double lucroAtual = 0;
-            //double SaldoBTC = Convert.ToDouble(txtSaldoAtual.Text);
-            
-            //double ValorAtual = Convert.ToDouble(txtLinhaAtual.Text);
-            //double mxCompra = Convert.ToDouble(txtMxCompra.Text);
-            //double mxVenda = Convert.ToDouble(txtMxVenda.Text);
+        private void Calculos(double media_loc, double valor, int n_linha)
+        {            
+            double volume = Convert.ToDouble(txtVol.Text);           
 
-            //if (ValorAtual < media_loc)
-            //{
-            //    //Compra xx BTC por cotação atual de U$
-            //    SaldoBTC = SaldoBTC - mxCompra;
-            //}
-            //if (ValorAtual > media_loc)
-            //{
-            //    //Vende xx BTC por cotação atual de U$
-            //    SaldoBTC = SaldoBTC + mxVenda;
-            //}
+            if (valor < media_loc)
+            {
+                //Compra xx BTC por cotação atual de U$
+                Saida[4] = Saida[4] - (volume * valor);
+            }
+            if (valor > media_loc)
+            {
+                //Vende xx BTC por cotação atual de U$
+                Saida[4] = Saida[4] + (volume * valor);
+            }
 
-            //txtSaldoAtual.Text = SaldoBTC.ToString();
-            
+            textBox4.Text = Saida[4].ToString();
+            textBox8.Text = n_linha.ToString();
         }
 
 
@@ -125,6 +122,7 @@ namespace WinBTC
             using var streamReader = File.OpenText(txtArq.Text);
            
             using var csvReader = new CsvReader(streamReader, csvConfig);
+            
 
             while (csvReader.Read())
             {
@@ -132,15 +130,15 @@ namespace WinBTC
                 i++;
                 l++;
                 txtLinha.Text = l.ToString();
-                
-                V_buffer[i] = Convert.ToDouble(v_open);
+                double valor = Convert.ToDouble(v_open);
+                V_buffer[i] = valor;
                 
                 if (i >= T_buffer)
                 {
                     i = 0;
                 }
                 
-                Calculos(C_Media(V_buffer));
+                Calculos(C_Media(V_buffer), valor, l);
 
             }
         }
@@ -174,6 +172,7 @@ namespace WinBTC
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+            Atualiza();
             LerArquivo();
         }
 

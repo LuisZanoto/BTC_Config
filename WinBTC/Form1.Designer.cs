@@ -36,25 +36,43 @@ namespace WinBTC
             this.label2 = new System.Windows.Forms.Label();
             this.txtArq = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSaldoSoma = new System.Windows.Forms.TextBox();
+            this.txtBTC_Cota = new System.Windows.Forms.TextBox();
+            this.txtSaldoBTCini = new System.Windows.Forms.TextBox();
+            this.txtSaldoUini = new System.Windows.Forms.TextBox();
+            this.txtBtc_Conv = new System.Windows.Forms.TextBox();
+            this.txtVol = new System.Windows.Forms.TextBox();
+            this.txtCotacao = new System.Windows.Forms.TextBox();
+            this.txtLinha = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtLinha = new System.Windows.Forms.TextBox();
-            this.txtCotacao = new System.Windows.Forms.TextBox();
-            this.txtC_V = new System.Windows.Forms.TextBox();
-            this.txtBtc_Conv = new System.Windows.Forms.TextBox();
-            this.txtSaldoUini = new System.Windows.Forms.TextBox();
-            this.txtSaldoBTCini = new System.Windows.Forms.TextBox();
-            this.txtBTC_Cota = new System.Windows.Forms.TextBox();
-            this.txtSaldoSoma = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_Arq
@@ -120,7 +138,7 @@ namespace WinBTC
             this.groupBox2.Controls.Add(this.txtSaldoBTCini);
             this.groupBox2.Controls.Add(this.txtSaldoUini);
             this.groupBox2.Controls.Add(this.txtBtc_Conv);
-            this.groupBox2.Controls.Add(this.txtC_V);
+            this.groupBox2.Controls.Add(this.txtVol);
             this.groupBox2.Controls.Add(this.txtCotacao);
             this.groupBox2.Controls.Add(this.txtLinha);
             this.groupBox2.Controls.Add(this.label6);
@@ -140,15 +158,143 @@ namespace WinBTC
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Parâmetros iniciais :";
             // 
+            // txtSaldoSoma
+            // 
+            this.txtSaldoSoma.BackColor = System.Drawing.Color.Aqua;
+            this.txtSaldoSoma.Location = new System.Drawing.Point(682, 44);
+            this.txtSaldoSoma.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSaldoSoma.Name = "txtSaldoSoma";
+            this.txtSaldoSoma.Size = new System.Drawing.Size(115, 25);
+            this.txtSaldoSoma.TabIndex = 25;
+            this.txtSaldoSoma.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBTC_Cota
+            // 
+            this.txtBTC_Cota.BackColor = System.Drawing.Color.Aqua;
+            this.txtBTC_Cota.Location = new System.Drawing.Point(531, 44);
+            this.txtBTC_Cota.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBTC_Cota.Name = "txtBTC_Cota";
+            this.txtBTC_Cota.Size = new System.Drawing.Size(115, 25);
+            this.txtBTC_Cota.TabIndex = 24;
+            this.txtBTC_Cota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSaldoBTCini
+            // 
+            this.txtSaldoBTCini.Location = new System.Drawing.Point(450, 44);
+            this.txtSaldoBTCini.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSaldoBTCini.Name = "txtSaldoBTCini";
+            this.txtSaldoBTCini.Size = new System.Drawing.Size(62, 25);
+            this.txtSaldoBTCini.TabIndex = 23;
+            this.txtSaldoBTCini.Text = "0,04";
+            this.txtSaldoBTCini.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSaldoUini
+            // 
+            this.txtSaldoUini.Location = new System.Drawing.Point(365, 44);
+            this.txtSaldoUini.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSaldoUini.Name = "txtSaldoUini";
+            this.txtSaldoUini.Size = new System.Drawing.Size(62, 25);
+            this.txtSaldoUini.TabIndex = 22;
+            this.txtSaldoUini.Text = "2000,00";
+            this.txtSaldoUini.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBtc_Conv
+            // 
+            this.txtBtc_Conv.BackColor = System.Drawing.Color.Aqua;
+            this.txtBtc_Conv.Location = new System.Drawing.Point(285, 44);
+            this.txtBtc_Conv.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBtc_Conv.Name = "txtBtc_Conv";
+            this.txtBtc_Conv.Size = new System.Drawing.Size(66, 25);
+            this.txtBtc_Conv.TabIndex = 21;
+            this.txtBtc_Conv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtVol
+            // 
+            this.txtVol.Location = new System.Drawing.Point(186, 44);
+            this.txtVol.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVol.Name = "txtVol";
+            this.txtVol.Size = new System.Drawing.Size(62, 25);
+            this.txtVol.TabIndex = 20;
+            this.txtVol.Text = "0,001";
+            this.txtVol.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtCotacao
+            // 
+            this.txtCotacao.Location = new System.Drawing.Point(63, 44);
+            this.txtCotacao.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCotacao.Name = "txtCotacao";
+            this.txtCotacao.Size = new System.Drawing.Size(66, 25);
+            this.txtCotacao.TabIndex = 19;
+            this.txtCotacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtLinha
+            // 
+            this.txtLinha.Location = new System.Drawing.Point(15, 44);
+            this.txtLinha.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLinha.Name = "txtLinha";
+            this.txtLinha.Size = new System.Drawing.Size(26, 25);
+            this.txtLinha.TabIndex = 6;
+            this.txtLinha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 19);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Linha :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(657, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 19);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Saldo Soma BTC + U$ :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(518, 20);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 19);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Saldo BTC (cotação) :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(440, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 19);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Saldo BTC :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(365, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 19);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Saldo U$ :";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(133, 20);
+            this.label12.Location = new System.Drawing.Point(164, 20);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 19);
+            this.label12.Size = new System.Drawing.Size(84, 19);
             this.label12.TabIndex = 13;
-            this.label12.Text = "btc comp/venda :";
+            this.label12.Text = "btc volume :";
             // 
             // label11
             // 
@@ -181,133 +327,193 @@ namespace WinBTC
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // label1
+            // groupBox3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 19);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Saldo U$ :";
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Location = new System.Drawing.Point(10, 200);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(827, 93);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Resultado :";
             // 
-            // label3
+            // textBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(440, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 19);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Saldo BTC :";
+            this.textBox1.BackColor = System.Drawing.Color.Aqua;
+            this.textBox1.Location = new System.Drawing.Point(681, 44);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 25);
+            this.textBox1.TabIndex = 25;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label4
+            // textBox2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(518, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 19);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Saldo BTC (cotação) :";
+            this.textBox2.BackColor = System.Drawing.Color.Aqua;
+            this.textBox2.Location = new System.Drawing.Point(556, 44);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(115, 25);
+            this.textBox2.TabIndex = 24;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label5
+            // textBox3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(657, 20);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 19);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Saldo Soma BTC + U$ :";
+            this.textBox3.BackColor = System.Drawing.Color.Aqua;
+            this.textBox3.Location = new System.Drawing.Point(471, 44);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(62, 25);
+            this.textBox3.TabIndex = 23;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label6
+            // textBox4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 20);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 19);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Linha :";
+            this.textBox4.BackColor = System.Drawing.Color.Aqua;
+            this.textBox4.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBox4.Location = new System.Drawing.Point(348, 44);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(106, 25);
+            this.textBox4.TabIndex = 22;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtLinha
+            // textBox5
             // 
-            this.txtLinha.Location = new System.Drawing.Point(15, 44);
-            this.txtLinha.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLinha.Name = "txtLinha";
-            this.txtLinha.Size = new System.Drawing.Size(26, 25);
-            this.txtLinha.TabIndex = 6;
-            this.txtLinha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox5.BackColor = System.Drawing.Color.Aqua;
+            this.textBox5.Location = new System.Drawing.Point(267, 44);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(66, 25);
+            this.textBox5.TabIndex = 21;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtCotacao
+            // textBox6
             // 
-            this.txtCotacao.Location = new System.Drawing.Point(63, 44);
-            this.txtCotacao.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCotacao.Name = "txtCotacao";
-            this.txtCotacao.Size = new System.Drawing.Size(66, 25);
-            this.txtCotacao.TabIndex = 19;
-            this.txtCotacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox6.BackColor = System.Drawing.Color.Aqua;
+            this.textBox6.Location = new System.Drawing.Point(186, 44);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(62, 25);
+            this.textBox6.TabIndex = 20;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtC_V
+            // textBox7
             // 
-            this.txtC_V.Location = new System.Drawing.Point(186, 44);
-            this.txtC_V.Margin = new System.Windows.Forms.Padding(2);
-            this.txtC_V.Name = "txtC_V";
-            this.txtC_V.Size = new System.Drawing.Size(62, 25);
-            this.txtC_V.TabIndex = 20;
-            this.txtC_V.Text = "0,001";
-            this.txtC_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox7.BackColor = System.Drawing.Color.Aqua;
+            this.textBox7.Location = new System.Drawing.Point(93, 44);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(66, 25);
+            this.textBox7.TabIndex = 19;
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtBtc_Conv
+            // textBox8
             // 
-            this.txtBtc_Conv.BackColor = System.Drawing.Color.Aqua;
-            this.txtBtc_Conv.Location = new System.Drawing.Point(285, 44);
-            this.txtBtc_Conv.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBtc_Conv.Name = "txtBtc_Conv";
-            this.txtBtc_Conv.Size = new System.Drawing.Size(66, 25);
-            this.txtBtc_Conv.TabIndex = 21;
-            this.txtBtc_Conv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox8.BackColor = System.Drawing.Color.Aqua;
+            this.textBox8.Location = new System.Drawing.Point(15, 44);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(60, 25);
+            this.textBox8.TabIndex = 6;
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtSaldoUini
+            // label7
             // 
-            this.txtSaldoUini.Location = new System.Drawing.Point(365, 44);
-            this.txtSaldoUini.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSaldoUini.Name = "txtSaldoUini";
-            this.txtSaldoUini.Size = new System.Drawing.Size(62, 25);
-            this.txtSaldoUini.TabIndex = 22;
-            this.txtSaldoUini.Text = "2000,00";
-            this.txtSaldoUini.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 19);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 19);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Linha :";
             // 
-            // txtSaldoBTCini
+            // label8
             // 
-            this.txtSaldoBTCini.Location = new System.Drawing.Point(450, 44);
-            this.txtSaldoBTCini.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSaldoBTCini.Name = "txtSaldoBTCini";
-            this.txtSaldoBTCini.Size = new System.Drawing.Size(62, 25);
-            this.txtSaldoBTCini.TabIndex = 23;
-            this.txtSaldoBTCini.Text = "0,04";
-            this.txtSaldoBTCini.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(671, 19);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(149, 19);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Saldo Soma BTC + U$ :";
             // 
-            // txtBTC_Cota
+            // label9
             // 
-            this.txtBTC_Cota.BackColor = System.Drawing.Color.Aqua;
-            this.txtBTC_Cota.Location = new System.Drawing.Point(531, 44);
-            this.txtBTC_Cota.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBTC_Cota.Name = "txtBTC_Cota";
-            this.txtBTC_Cota.Size = new System.Drawing.Size(115, 25);
-            this.txtBTC_Cota.TabIndex = 24;
-            this.txtBTC_Cota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(537, 19);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 19);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Saldo BTC (cotação) :";
             // 
-            // txtSaldoSoma
+            // label13
             // 
-            this.txtSaldoSoma.BackColor = System.Drawing.Color.Aqua;
-            this.txtSaldoSoma.Location = new System.Drawing.Point(682, 44);
-            this.txtSaldoSoma.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSaldoSoma.Name = "txtSaldoSoma";
-            this.txtSaldoSoma.Size = new System.Drawing.Size(115, 25);
-            this.txtSaldoSoma.TabIndex = 25;
-            this.txtSaldoSoma.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(458, 19);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 19);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Saldo BTC :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(383, 19);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(71, 19);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Saldo U$ :";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(163, 19);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(84, 19);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "btc volume :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(251, 19);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(99, 19);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "BTC Conv. U$ :";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(93, 19);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(66, 19);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Cotação :";
             // 
             // Form1
             // 
@@ -315,6 +521,7 @@ namespace WinBTC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(847, 540);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -327,6 +534,8 @@ namespace WinBTC
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -353,10 +562,27 @@ namespace WinBTC
         private System.Windows.Forms.TextBox txtSaldoBTCini;
         private System.Windows.Forms.TextBox txtSaldoUini;
         private System.Windows.Forms.TextBox txtBtc_Conv;
-        private System.Windows.Forms.TextBox txtC_V;
+        private System.Windows.Forms.TextBox txtVol;
         private System.Windows.Forms.TextBox txtCotacao;
         private System.Windows.Forms.TextBox txtLinha;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }
 
