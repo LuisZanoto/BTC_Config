@@ -54,6 +54,10 @@ namespace WinBTC
             this.label10 = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtNVendas = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtNCompras = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -70,10 +74,6 @@ namespace WinBTC
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtNCompras = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtNVendas = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -316,9 +316,9 @@ namespace WinBTC
             this.label10.Location = new System.Drawing.Point(94, 20);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 19);
+            this.label10.Size = new System.Drawing.Size(69, 19);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Cotação :";
+            this.label10.Text = "Cot. Inic. :";
             // 
             // btnIniciar
             // 
@@ -361,6 +361,46 @@ namespace WinBTC
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado :";
+            // 
+            // txtNVendas
+            // 
+            this.txtNVendas.BackColor = System.Drawing.Color.Aqua;
+            this.txtNVendas.Location = new System.Drawing.Point(99, 114);
+            this.txtNVendas.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNVendas.Name = "txtNVendas";
+            this.txtNVendas.Size = new System.Drawing.Size(60, 25);
+            this.txtNVendas.TabIndex = 28;
+            this.txtNVendas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(93, 89);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 19);
+            this.label19.TabIndex = 29;
+            this.label19.Text = "Vendas :";
+            // 
+            // txtNCompras
+            // 
+            this.txtNCompras.BackColor = System.Drawing.Color.Aqua;
+            this.txtNCompras.Location = new System.Drawing.Point(15, 114);
+            this.txtNCompras.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNCompras.Name = "txtNCompras";
+            this.txtNCompras.Size = new System.Drawing.Size(60, 25);
+            this.txtNCompras.TabIndex = 26;
+            this.txtNCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(9, 89);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(71, 19);
+            this.label18.TabIndex = 27;
+            this.label18.Text = "Compras :";
             // 
             // textBox1
             // 
@@ -519,49 +559,9 @@ namespace WinBTC
             this.label17.Location = new System.Drawing.Point(93, 19);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(66, 19);
+            this.label17.Size = new System.Drawing.Size(73, 19);
             this.label17.TabIndex = 11;
-            this.label17.Text = "Cotação :";
-            // 
-            // txtNCompras
-            // 
-            this.txtNCompras.BackColor = System.Drawing.Color.Aqua;
-            this.txtNCompras.Location = new System.Drawing.Point(15, 114);
-            this.txtNCompras.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNCompras.Name = "txtNCompras";
-            this.txtNCompras.Size = new System.Drawing.Size(60, 25);
-            this.txtNCompras.TabIndex = 26;
-            this.txtNCompras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(9, 89);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(71, 19);
-            this.label18.TabIndex = 27;
-            this.label18.Text = "Compras :";
-            // 
-            // txtNVendas
-            // 
-            this.txtNVendas.BackColor = System.Drawing.Color.Aqua;
-            this.txtNVendas.Location = new System.Drawing.Point(99, 114);
-            this.txtNVendas.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNVendas.Name = "txtNVendas";
-            this.txtNVendas.Size = new System.Drawing.Size(60, 25);
-            this.txtNVendas.TabIndex = 28;
-            this.txtNVendas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(93, 89);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 19);
-            this.label19.TabIndex = 29;
-            this.label19.Text = "Vendas :";
+            this.label17.Text = "Cot. Final :";
             // 
             // Form1
             // 
