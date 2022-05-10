@@ -56,7 +56,23 @@ namespace WinBTC
 
             txtArq.Text = filePath;
             Le_linha(1);
+            Atualiza();
         }
+        private void Atualiza()
+        {
+            double d2 = Convert.ToDouble(txtC_V.Text);
+            double c2 = Convert.ToDouble(txtCotacao.Text);
+            double g2 = Convert.ToDouble(txtSaldoBTCini.Text);
+            double h2 = g2 * c2;
+            double f2 = Convert.ToDouble(txtSaldoUini.Text);
+            double i2 = h2 + f2;
+            txtBtc_Conv.Text = (c2 * d2).ToString();
+            txtBTC_Cota.Text = (h2).ToString();
+            
+            txtSaldoSoma.Text = (i2).ToString();
+        }
+
+
         private double C_Media(double[] V_buffer_c)
         {
             double soma = 0;
@@ -131,7 +147,7 @@ namespace WinBTC
 
         private void Le_linha(int l1)
         {
-            int i = 0;
+          
             var csvConfig = new CsvConfiguration(CultureInfo.CurrentCulture)
             {
                 HasHeaderRecord = false,
