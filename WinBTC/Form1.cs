@@ -71,7 +71,8 @@ namespace WinBTC
             txtBTC_Cota.Text = (h2).ToString();
             
             txtSaldoSoma.Text = (i2).ToString();
-            Saida[4] = f2;
+            Saida[4] = f2; // Saldo U$
+            Saida[3] = g2;// Saldo BTC
         }
 
 
@@ -95,14 +96,22 @@ namespace WinBTC
             {
                 //Compra xx BTC por cotação atual de U$
                 Saida[4] = Saida[4] - (volume * valor);
+                Saida[3] = Saida[3] + volume;
             }
             if (valor > media_loc)
             {
                 //Vende xx BTC por cotação atual de U$
                 Saida[4] = Saida[4] + (volume * valor);
+                Saida[3] = Saida[3] - volume;
             }
+            // Ultima Cotação
+            textBox7.Text = valor.ToString();
+            // Ultimo Saldo BTC cotação
+            textBox2.Text = (Saida[3] * valor).ToString();
+
 
             textBox4.Text = Saida[4].ToString();
+            textBox3.Text = Saida[3].ToString();
             textBox8.Text = n_linha.ToString();
         }
 
