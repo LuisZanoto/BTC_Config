@@ -40,25 +40,34 @@ namespace WinBTC
         {
             //var fileContent = string.Empty;
             var filePath = string.Empty;
-
+            bool ok_ = false;
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
 
                 openFileDialog.InitialDirectory = @"C:\";
-                openFileDialog.Filter = "xlsx files (*.*) | *.csv";
+                openFileDialog.Filter = "xlsx files (*.csv) | *.csv";
                 openFileDialog.FilterIndex = 1;
-
+                
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     //Get the path of specified file
                     filePath = openFileDialog.FileName;
-
+                    txtArq.Text = filePath;
+                    ok_ = true;
+                }
+                else
+                {
+                    txtArq.Text = "Escolher o Arquivo .csv !";
+                    ok_ = false;
                 }
             }
 
-            txtArq.Text = filePath;
-            Le_linha(1);
-            Atualiza();
+            if (ok_ == true)
+            {
+                Le_linha(1);
+                Atualiza();
+            }
+           
         }
         private void Atualiza()
         {
